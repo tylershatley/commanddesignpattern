@@ -13,5 +13,4 @@ public class PickupCommand implements Command {
         // TODO Auto-generated method stub
 
     }
-
 }
