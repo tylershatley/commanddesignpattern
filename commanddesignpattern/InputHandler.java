@@ -8,13 +8,14 @@ public class InputHandler {
     private HashMap <String, Command> commands;
 
     public InputHandler(Robot robot) {
+        puc = new PickupCommand(robot);
         commands = new HashMap<String, Command>();
         commands.put("pickup", puc);
     }
 
     public void inputEntered(String data) {
         if(commands.containsKey(data)) {
-            commands.get(data);
+            commands.get(data).execute();
         }
     }
 }
