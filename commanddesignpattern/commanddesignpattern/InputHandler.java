@@ -1,20 +1,18 @@
 package commanddesignpattern;
+
 import java.util.HashMap;
 
 public class InputHandler {
-    //idfk what to do
-    private Robot robot;
-    private PickupCommand puc;
-    private HashMap <String, Command> commands;
+    private HashMap<String, Command> commands;
 
     public InputHandler(Robot robot) {
-        puc = new PickupCommand(robot);
         commands = new HashMap<String, Command>();
-        commands.put("pickup", puc);
+        commands.put("pickup", new PickupCommand(robot));
+        commands.put("jump", new JumpCommand(robot));
     }
 
     public void inputEntered(String data) {
-        if(commands.containsKey(data)) {
+        if (commands.containsKey(data)) {
             commands.get(data).execute();
         }
     }
