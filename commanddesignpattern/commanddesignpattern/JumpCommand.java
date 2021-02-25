@@ -1,5 +1,4 @@
 package commanddesignpattern;
-
 public class JumpCommand implements Command {
     private Robot robot;
 

@@ -1,5 +1,4 @@
 package commanddesignpattern;
-
 import java.util.Scanner;
 
 public class RobotDriver {
