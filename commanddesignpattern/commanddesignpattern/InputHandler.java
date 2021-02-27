@@ -25,6 +25,7 @@ public class InputHandler {
         commands.put("pickup", new PickupCommand(robot));
         commands.put("jump", new JumpCommand(robot));
         commands.put("fire", new FireCommand(robot));
+        commands.put("heal", new HealCommand(robot));
     }
 
     /**
