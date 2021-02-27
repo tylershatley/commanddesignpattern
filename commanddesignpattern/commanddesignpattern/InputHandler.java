@@ -24,6 +24,7 @@ public class InputHandler {
         commands = new HashMap<String, Command>();
         commands.put("pickup", new PickupCommand(robot));
         commands.put("jump", new JumpCommand(robot));
+        commands.put("fire", new FireCommand(robot));
     }
 
     /**
